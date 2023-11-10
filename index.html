@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/shailendramaurya/racoon/main/logo.png">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico/css/pico.classless.min.css" />
+	<link rel="stylesheet" href="https://css.gg/css?=website|loadbar-alt|check|info" />
+	<link rel="stylesheet" href="styles.css" />
+	<script defer src="script.js"></script>
+	<script defer src="modal.js"></script>
+	<title>media downloader</title>
+</head>
+<body>
+	<header align='center'>
+     <h1><img src="https://raw.githubusercontent.com/shailendramaurya/racoon/main/logo.png">media downloader</h1>
+	</header>
+	<main class="container">
+      <form>
+        <label for="vQuality" >select video quality</label>
+				<select id="vQuality">
+           <option value="144">144p</option>
+           <option value="240">240p</option>
+           <option value="360">360p</option>
+           <option value="480">480p</option>
+           <option value="720" selected>720p</option>
+           <option value="1080">1080p</option>
+				</select>
+				<label for="aFormat">select audio quality</label>
+				<select id="aFormat">
+           <option value="best">best</option>
+           <option value="mp3">mp3</option>
+           <option value="ogg">ogg</option>
+           <option value="wav">wav</option>
+           <option value="opus">opus</option>
+				</select>
+				<input type="checkbox" id="isAudioOnly">
+        <label for="isAudioOnly" >audio only</label>
+				<br><br>
+				<input type="url" id="url" placeholder="input url ('https://www.youtube.com/watch?v=nj8W3IXLbfE')" required> 
+				<button type="submit" class="submitBtn" >download</button>
+				
+			</form>
+			<div id="status">
+       
+			</div>
+	</main>
+	<footer align='center'>
+    <a class="contrast" data-target="about" onClick="toggleModal(event)">
+      about
+		</a>
+		<a class="contrast" data-target="developer" onClick="toggleModal(event)">
+      developer
+		</a>
+		<a class="contrast" data-target="supported-sites" onClick="toggleModal(event)">
+      supported sites
+		</a>
+
+  <dialog id="about">
+     <article>
+       <header>about</header>
+			 <img width="50%" src="https://raw.githubusercontent.com/shailendramaurya/racoon/main/logo.png" class="logo" />
+			 <br><br>
+			 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem sequi modi tenetur fugit. Quae, numquam voluptates. Maxime repellat ratione numquam incidunt amet modi aspernatur sed labore, veritatis quos assumenda tempore.
+			 <footer><a href="https://github.com/gonzalote99">github</a></footer>
+		 </article>
+	</dialog>
+	<dialog id="developer">
+    <article>
+      <header>me</header>
+			<div style="display: flex">
+         web developer
+			</div>
+		</article>
+	</dialog>
+	</footer>
+	<dialog id="supported-sites">
+    <article>
+     <header>supported sites</header>
+		 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem sequi modi tenetur fugit. Quae, numquam voluptates. Maxime repellat ratione numquam incidunt amet modi aspernatur sed labore, veritatis quos assumenda tempore.
+		</article>
+	</dialog>
+</body>
+</html>
